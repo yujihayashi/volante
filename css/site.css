@@ -17,8 +17,8 @@ NON-RESPONSIVE START
   width: 960px;
 }
 .navbar-nav > li > a {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 36.5px;
+  padding-bottom: 36.5px;
 }
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
 /* Finesse the page header spacing */
@@ -95,11 +95,11 @@ NON-RESPONSIVE START
 NON-RESPONSIVE END
 */
 ::selection {
-  background-color: #812d2a;
+  background-color: #ab0000;
   color: #FFF;
 }
 ::-moz-selection {
-  background-color: #812d2a;
+  background-color: #ab0000;
   color: #FFF;
 }
 small {
@@ -116,8 +116,15 @@ button {
 /*
 FONTS START
 **********************************************************************************************/
-.box-chamada {
-  font-family: 'robotoblack', Arial, sans-serif;
+.box-dicas .title {
+  font-family: 'GothamBold', Arial, sans-serif;
+  font-weight: normal;
+}
+.btn-destaque,
+.box-banner .plus,
+.btn,
+.menu-departamentos {
+  font-family: 'GothamUltraItalic', Arial, sans-serif;
   font-weight: normal;
 }
 /**********************************************************************************************
@@ -126,6 +133,98 @@ FONTS END
 /*
 ESTRUTURA START
 **********************************************************************************************/
+.extra-header {
+  background: url(../imagem/site/bg-header.png) no-repeat center top;
+  position: relative;
+  z-index: 2;
+}
+.extra-header .site-header {
+  height: 168px;
+}
+.extra-header .navbar {
+  background: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+}
+.extra-header .navbar-brand {
+  padding: 18px 10px 12px;
+  margin-left: 10px;
+}
+.extra-header .navbar-nav > li + li {
+  background: url(../imagem/site/bg-menu-item.png) no-repeat left center;
+  padding-left: 1px;
+}
+.extra-header .menu-departamentos {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-left: 90px;
+}
+.extra-header .menu-departamentos > li > a {
+  color: #000;
+  padding: 18px 15px;
+}
+.extra-header .menu-departamentos > li + li {
+  background: url(../imagem/site/bg-menu-departamento-item.png) no-repeat left center;
+  padding-left: 8px;
+}
+.extra-header .line-1 {
+  height: 98px;
+}
+.extra-header .line-2 {
+  height: 54px;
+  width: 1200px;
+}
+.extra-central {
+  position: relative;
+  z-index: 1;
+  margin-top: -16px;
+}
+.extra-central .site-central {
+  padding: 0 0 30px;
+}
+.extra-central .site-chamadas {
+  background: url(../imagem/site/bg-central-home.jpg) no-repeat center top;
+  position: relative;
+  z-index: 2;
+}
+.extra-central .box-banner {
+  position: relative;
+  z-index: 1;
+}
+.extra-contato {
+  background: #242322 url(../imagem/site/bg-contato.jpg) no-repeat center top;
+}
+.extra-contato,
+.extra-contato a {
+  color: #FFF;
+}
+.extra-contato .site-contato {
+  padding: 30px 0;
+}
+.extra-contato .form-control {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFF;
+}
+.extra-footer {
+  background: url(../imagem/site/bg-footer.jpg) no-repeat center top #000000;
+  text-align: center;
+}
+.extra-footer .site-footer {
+  padding: 26px 0;
+}
+.extra-footer small {
+  font-size: 10px;
+}
 /**********************************************************************************************
 ESTRUTURA END
 */
@@ -150,6 +249,177 @@ CLASSES START
   -moz-border-radius: 150px;
   border-radius: 150px;
 }
+.btn {
+  text-transform: uppercase;
+  padding-left: 70px;
+  padding-right: 70px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+.btn-destaque,
+.box-banner .plus {
+  display: block;
+  width: 299px;
+  height: 71px;
+  background: url(../imagem/site/btn-destaque.png) no-repeat left top;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 15px 0;
+}
+.btn-destaque:hover,
+.box-banner .plus:hover {
+  color: #FFF;
+}
+.box-banner {
+  background: #ab0000;
+  color: #FFF;
+}
+.box-banner,
+.box-banner .cycle-slideshow,
+.box-banner .cycle-slideshow li {
+  height: 380px;
+  width: 100%;
+  overflow: hidden;
+}
+.box-banner .cycle-slideshow {
+  position: relative;
+  z-index: 1;
+}
+.box-banner .cycle-slideshow li {
+  background: no-repeat center top;
+}
+.box-banner .cycle-slideshow .content {
+  width: 325px;
+  padding-top: 40px;
+}
+.box-banner .title {
+  text-transform: uppercase;
+  line-height: .9;
+}
+.box-banner .title,
+.box-banner .desc {
+  margin-bottom: 20px;
+}
+.box-banner .cycle-nav {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.box-banner .cycle-nav span {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border: 1px solid #FFF;
+  text-indent: -1000px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.box-banner .cycle-nav span + span {
+  margin-left: 10px;
+}
+.box-banner .cycle-nav span.cycle-pager-active {
+  background: #FFF;
+}
+.box-banner .cycle-nav .container {
+  position: relative;
+}
+.box-banner .cycle-nav .content {
+  padding: 20px;
+}
+.box-chamadas {
+  height: 100px;
+  margin-bottom: 30px;
+}
+.box-chamadas .chamada {
+  position: relative;
+  width: 33.33333333333333%;
+  float: left;
+  height: 99px;
+  padding: 22px 38px;
+}
+.box-chamadas .chamada .icone {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.box-chamadas .chamada .title {
+  display: block;
+  line-height: .9;
+  text-transform: uppercase;
+  font-size: 26px;
+  margin: 0;
+}
+.box-chamadas .chamada .title small {
+  color: #000;
+  font-size: 13px;
+}
+.box-chamadas .chamada a {
+  color: #000;
+}
+.box-dicas .imagem {
+  display: block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.box-dicas .title {
+  font-size: 16px;
+}
+.box-dicas .box-header {
+  margin-bottom: 40px;
+}
+.box-dicas .box-content {
+  position: relative;
+  height: 148px;
+}
+.box-dicas .plus {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.box-parceiros {
+  border: 1px solid #d7d7d7;
+  height: 206px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.box-parceiros .box-header {
+  background: url(../imagem/site/box-parceiras-header.jpg) repeat-x top;
+  height: 51px;
+  padding: 10px 0;
+  text-align: center;
+}
+.box-parceiros .box-content {
+  text-align: center;
+}
+.box-parceiros .box-content,
+.box-parceiros .box-content .cycle-slideshow,
+.box-parceiros .box-content .cycle-slideshow li {
+  height: 149px;
+  width: 100%;
+}
+.box-parceiros .box-content .imagem {
+  display: inline-block;
+  width: 97%;
+  vertical-align: middle;
+}
+.box-parceiros .box-content .imagem img {
+  max-width: 100%;
+}
 .imagem {
   display: inline-block;
   overflow: hidden;
@@ -170,11 +440,39 @@ CLASSES START
   display: inline-block;
   background-image: url(../imagem/site/icon.png);
 }
+.mapa-footer {
+  text-align: center;
+  padding-top: 26px;
+}
 .space {
   width: 1%;
   display: inline-block;
   height: 100%;
   vertical-align: middle;
+}
+.social-footer {
+  margin-bottom: 15px;
+}
+.social-footer a {
+  display: inline-block;
+  padding: 0 5px;
+}
+.social-footer a + a {
+  background: url(../imagem/site/bg-social-item.gif) no-repeat center left;
+}
+.strip {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+.strip:after {
+  position: relative;
+  content: " ";
+  width: 500px;
+  height: 13px;
+  background: url(../imagem/site/bg-strip.gif) repeat-x top;
+  display: inline-block;
+  margin-left: 10px;
 }
 .relative {
   position: relative;

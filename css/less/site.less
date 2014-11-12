@@ -1,4 +1,4 @@
-@primary-color: #812d2a; 
+@primary-color: #ab0000; 
 @secondary-color: #089bdf;  
 @third-color: #b6967e;  
 /*
@@ -28,7 +28,7 @@ NON-RESPONSIVE START
 **********************************************************************************************/
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
 .container {max-width: none !important;width: 960px;}
-.navbar-nav > li > a {padding-top: 15px;padding-bottom:15px;}
+.navbar-nav > li > a {padding-top: 36.5px;padding-bottom:36.5px;}
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
 /* Finesse the page header spacing */.page-header {margin-bottom: 30px;}.page-header .lead {margin-bottom: 10px;}/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*//* Reset the container *//* Always float the navbar header */.navbar-header {float: left;}/* Undo the collapsing navbar */.navbar-collapse {display: block !important;height: auto !important;padding-bottom: 0;overflow: visible !important;}.navbar-toggle {display: none;}.navbar-collapse {border-top: 0;}.navbar-brand {margin-left: -15px;}/* Always apply the floated nav */.navbar-nav {float: left;margin: 0;}.navbar-nav > li {float: left;}/* Redeclare since we override the float above */.navbar-nav.navbar-right {float: right;}/* Undo custom dropdowns */.navbar .navbar-nav .open .dropdown-menu {position: absolute;float: left;background-color: #fff;border: 1px solid #cccccc;border: 1px solid rgba(0, 0, 0, 0.15);border-width: 0 1px 1px;border-radius: 0 0 4px 4px;-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);}.navbar-default .navbar-nav .open .dropdown-menu > li > a {color: #333;}.navbar .navbar-nav .open .dropdown-menu > li > a:hover,.navbar .navbar-nav .open .dropdown-menu > li > a:focus,.navbar .navbar-nav .open .dropdown-menu > .active > a,.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {color: #fff !important;background-color: #428bca !important;}.navbar .navbar-nav .open .dropdown-menu > .disabled > a,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {color: #999 !important;background-color: transparent !important;}
 /**********************************************************************************************
@@ -42,14 +42,52 @@ a, button  {transition: all 0.25s ease 0s;}
 /*
 FONTS START
 **********************************************************************************************/
-.box-chamada {font-family: 'robotoblack', Arial, sans-serif;font-weight: normal;}
+.box-dicas .title {font-family: 'GothamBold', Arial, sans-serif;font-weight: normal;}
+.btn-destaque, .box-banner .plus, .btn, .menu-departamentos {font-family: 'GothamUltraItalic', Arial, sans-serif;font-weight: normal;}
 /**********************************************************************************************
 FONTS END
 */
 /*
 ESTRUTURA START
 **********************************************************************************************/
-
+.extra-header {
+	background: url(../imagem/site/bg-header.png) no-repeat center top;position: relative;z-index: 2;
+	.site-header {height: 168px;}
+	.navbar {background: none;-webkit-border-radius: 0;-moz-border-radius: 0;-ms-border-radius: 0;-o-border-radius: 0;border-radius: 0;border:0;margin:0;}
+	.navbar-brand {padding:18px 10px 12px;margin-left: 10px;}
+	.navbar-nav {
+		> li {
+			+ li {background: url(../imagem/site/bg-menu-item.png) no-repeat left center;padding-left: 1px;}
+		}
+	}
+	.menu-departamentos {
+		font-size: 16px;text-transform: uppercase;margin-left: 90px;
+		> li {
+			> a {color: #000;padding:18px 15px;}
+			+ li {background: url(../imagem/site/bg-menu-departamento-item.png) no-repeat left center;padding-left: 8px;}
+		}
+	}
+	.line-1 {height: 98px;}
+	.line-2 {height: 54px;width: 1200px;}
+}
+.extra-central {
+	position: relative;z-index: 1;margin-top:-16px;
+	.site-central {padding:0 0 30px;}
+	.site-chamadas {background: url(../imagem/site/bg-central-home.jpg) no-repeat center top;position: relative;z-index: 2;}
+	.box-banner {position: relative;z-index: 1;}
+}
+.extra-contato {
+	background: #242322 url(../imagem/site/bg-contato.jpg) no-repeat center top;
+	&, a {color: #FFF;}
+	.site-contato {padding:30px 0;}
+	.form-control {-webkit-border-radius: 0;-moz-border-radius: 0;-ms-border-radius: 0;-o-border-radius: 0;border-radius: 0;background:rgba(255, 255, 255, .1);color: #FFF;}
+	.mapa-footer {}
+}
+.extra-footer {
+	background: url(../imagem/site/bg-footer.jpg) no-repeat center top #000;text-align: center;
+	.site-footer {padding:26px 0;}
+	small {font-size: 10px;}
+}
 /**********************************************************************************************
 ESTRUTURA END
 */
@@ -59,13 +97,87 @@ CLASSES START
 [class^='lista-'], [class^='lista-'], [class^='menu-'], [class^='menu-'] ul, .cycle-slideshow {list-style:none;margin-bottom:0;padding-left:0;}
 .btn-gray {background: #EEE;color:#C93F2A;}
 .btn-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
+.btn {text-transform: uppercase;padding-left:70px;padding-right: 70px;-webkit-border-radius: 0;-moz-border-radius: 0;-ms-border-radius: 0;-o-border-radius: 0;border-radius: 0;}
+.btn-destaque, .box-banner .plus {
+	display: block;width: 299px;height: 71px;background: url(../imagem/site/btn-destaque.png) no-repeat left top;text-align: center;text-transform: uppercase;font-size: 14px;padding:15px 0;
+	&:hover {color: #FFF;}
+}
+.box-banner {
+	background: @primary-color;color: #FFF;
+	&, .cycle-slideshow, .cycle-slideshow li {height: 380px;width: 100%;overflow: hidden;}
+	.cycle-slideshow {
+		position: relative;z-index: 1;
+		li {background: no-repeat center top;}
+		.content {width: 325px;padding-top:40px;}
+	}
+	.title {text-transform: uppercase;line-height: .9;}
+	.title, .desc {margin-bottom: 20px;}
+	.cycle-nav {
+		position: absolute;z-index: 2;left: 0;bottom: 0;right: 0;
+		span {
+			display: inline-block;width: 9px;height: 9px;border:1px solid #FFF;text-indent: -1000px;overflow: hidden;cursor: pointer;
+			+ span {margin-left: 10px;}
+			&.cycle-pager-active {background: #FFF;}
+		}
+		.container {position: relative;}
+		.content {padding:20px;}
+	}
+}
+.box-chamadas {
+	height: 100px;margin-bottom: 30px;
+	.chamada {
+		position: relative;width: 33.33333333333333%;float: left;height: 99px;padding:22px 38px;
+		.icone {position: absolute;right: 0;bottom: 0;}
+		.title {
+			display: block;line-height: .9;text-transform: uppercase;font-size: 26px;margin:0;
+			small {color: #000;font-size: 13px;}
+		}
+		a {color: #000;}
+	}
+}
+.box-dicas {
+	.imagem {display: block;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;overflow: hidden;}
+	.title {font-size: 16px;}
+	.box-header {margin-bottom: 40px;}
+	.box-content {position: relative;height: 148px;}
+	.plus {position: absolute;left: 0;bottom: 0;}
+}
+.box-parceiros {
+	border:1px solid #d7d7d7;height: 206px;-webkit-border-radius: 3px;-moz-border-radius: 3px;-ms-border-radius: 3px;-o-border-radius: 3px;border-radius: 3px;overflow: hidden;position: relative;
+	.box-header {
+		background: url(../imagem/site/box-parceiras-header.jpg) repeat-x top;height: 51px;padding:10px 0;text-align: center;
+	}
+	.box-content {
+		text-align: center;
+		&, .cycle-slideshow, .cycle-slideshow li {height: 149px;width: 100%;}
+		.imagem {
+			display: inline-block;width: 97%;vertical-align: middle;
+			img {max-width: 100%;}
+		}
+	}
+}
 
 .imagem {display: inline-block;overflow: hidden;max-width: 100%;}
 .imagem-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
 .inline-block {display:inline-block;}
 [class^='icon-'], [class*='icon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(../imagem/site/icon.png);}
 
+.mapa-footer {
+	text-align: center;padding-top:26px;
+}
+
 .space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
+.social-footer {
+	margin-bottom: 15px;
+	a {
+		display: inline-block;padding:0 5px;
+		+ a {background: url(../imagem/site/bg-social-item.gif) no-repeat center left;}
+	}
+}
+.strip {
+	overflow: hidden;width: 100%;white-space: nowrap;
+	&:after {position: relative;content:" ";width: 500px;height: 13px;background: url(../imagem/site/bg-strip.gif) repeat-x top;display: inline-block;margin-left: 10px;}
+}
 .relative {position: relative;}
 /**********************************************************************************************
 CLASSES END
